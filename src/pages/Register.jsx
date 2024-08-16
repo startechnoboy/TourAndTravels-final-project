@@ -5,11 +5,11 @@
 import React, { Component } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {register} from "../Store/AuthSlice";
+import { register } from "../Store/AuthSlice";
 import Google from "../assets/google.png";
 import show from "../assets/hide-password.png";
 import eye from "../assets/show-password.png";
-import "../styles/register.css"; 
+import "../styles/register.css";
 
 class Register extends Component {
   constructor(props) {
@@ -74,7 +74,7 @@ class Register extends Component {
               </div>
             )}
             <div className="auth-google">
-              <h1 className="text-black">Register with Google</h1>
+              <h1 className="text-black">Register form</h1>
             </div>
             <div className="form-auth p-2">
               <form onSubmit={this.handleSubmit}>
@@ -108,13 +108,16 @@ class Register extends Component {
                     type={passwordVisible ? "text" : "password"}
                     name="password"
                     value={inputData.password}
-                    onChange={this.handleChange}
+                    onChange={this.phandleChange}
                   />
                   <i
                     className="eye-icon text-white"
                     onClick={this.togglePasswordVisibility}
                   >
-                    <img src={passwordVisible ? show : eye} alt="Toggle visibility" />
+                    <img
+                      src={passwordVisible ? show : eye}
+                      alt="Toggle visibility"
+                    />
                   </i>
                 </div>
                 <div className="mt-8">

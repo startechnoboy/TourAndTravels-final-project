@@ -46,11 +46,11 @@ const Homeque = () => {
   const addToCartHandler = (destination) => {
     dispatch(addToCart(destination));
     Swal.fire({
-      icon: 'success',
-      title: 'Added to cart',
+      icon: "success",
+      title: "Added to cart",
       text: `${destination.name} has been added to your cart successfully!`,
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
   };
 
@@ -76,8 +76,10 @@ const Homeque = () => {
             <div className="z-10 gap-y-1 pt-4 overflow-hidden cursor-default text-center text-sm leading-6 text-gray-300">
               {destination.description}
             </div>
-
-            <div className="z-10 mt-4 justify-center text-center items-center">
+            <div className="z-10 mt-2 text-center text-xl font-semibold text-white">
+              Starting Price $20000{destination.price}
+            </div>
+            <div className="z-10 mt-1 justify-center text-center items-center">
               <Link to={`/detail/?id=${pageSum + i}`} key={pageSum + i}>
                 <button
                   onClick={() => showdetail(pageSum + i)}

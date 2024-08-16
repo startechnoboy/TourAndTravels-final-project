@@ -15,6 +15,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/places" element={<Homeque />} />
         <Route path="/explore" element={<Explore />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/detail" element={<DetailView />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/about" element={<About />} />

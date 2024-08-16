@@ -15,14 +15,14 @@
 
 .register-bg {
   width: 60%;
-  background-image: url("https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+  background-image: url("D:\REACT_JS\Final-Project\src\assets\register.png.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .login-bg {
   width: 60%;
-  background-image: url("../assets/new1.jpg");
+  /* background-image: url("../assets/new1.jpg"); */
   background-size: cover;
 }
 

@@ -7,6 +7,7 @@
       "description": "The Taj Mahal, an iconic ivory-white marble mausoleum, is one of the Seven Wonders of the World. It was built by Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal.",
       "location": "Agra, Uttar Pradesh, India",
       "bestTimeToVisit": "October to March",
+      "price": "22000",
       "popularActivities": [
         "Visiting the Taj Mahal",
         "Exploring Agra Fort",
@@ -50,6 +51,7 @@
       "description": "Goa, known for its picturesque beaches, is a popular beach destination in India. Visitors can enjoy golden sands, water sports, vibrant nightlife, and delicious seafood.",
       "location": "Goa, India",
       "bestTimeToVisit": "November to February",
+      "price": "22000",
       "popularActivities": [
         "Relaxing on the beaches",
         "Water sports",
@@ -93,6 +95,7 @@
       "description": "Kerala's backwaters are a network of serene waterways, lagoons, and lakes. Travelers can enjoy houseboat rides, lush green landscapes, and experience the unique coastal lifestyle.",
       "location": "Kerala, India",
       "bestTimeToVisit": "November to February",
+      "price": "22000",
       "popularActivities": [
         "Houseboat cruise",
         "Visiting Kumarakom Bird Sanctuary",
@@ -137,6 +140,7 @@
       "description": "Varanasi, one of the oldest cities in the world, is a spiritual hub in India. It is famous for its ghats on the Ganges River, religious rituals, temples, and vibrant cultural heritage.",
       "location": "Varanasi, Uttar Pradesh, India",
       "bestTimeToVisit": "October to March",
+      "price": "22000",
       "popularActivities": [
         "Ganga Aarti",
         "Boat ride on the Ganges",
@@ -179,6 +183,7 @@
       "description": "Jaipur, the capital city of Rajasthan, is known as the Pink City due to its distinctive pink-colored buildings. It boasts magnificent forts, palaces, museums, and a rich Rajasthani culture.",
       "location": "Jaipur, Rajasthan, India",
       "bestTimeToVisit": "October to March",
+      "price": "22000",
       "popularActivities": [
         "Exploring Amber Fort",
         "Visiting City Palace",
@@ -217,6 +222,7 @@
       "description": "Rishikesh, situated in the foothills of the Himalayas, is a hub for adventure seekers and spiritual enthusiasts. Known for its yoga and meditation centers, it offers thrilling activities like white-water rafting and trekking.",
       "location": "Uttarakhand, India",
       "bestTimeToVisit": "March to June",
+      "price": "22000",
       "popularActivities": [
         "Yoga and meditation",
         "White-water rafting",
@@ -259,6 +265,7 @@
       "description": "The Andaman Islands, a tropical paradise in the Bay of Bengal, boast pristine beaches, vibrant coral reefs, and a rich marine life. Perfect for beach lovers and water sports enthusiasts.",
       "location": "Andaman and Nicobar Islands, India",
       "bestTimeToVisit": "November to March",
+      "price": "22000",
       "popularActivities": [
         "Snorkeling and scuba diving",
         "Radhanagar Beach visit",
