@@ -7,6 +7,10 @@ import Swal from "sweetalert2";
 function Cart() {
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const [selectedHotels, setSelectedHotels] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedHotel, setSelectedHotel] = useState(null);
+  const [showPayment, setShowPayment] = useState(false);
 
   const handleDelete = (item) => {
     if (!item || !item.id) {
@@ -30,9 +34,7 @@ function Cart() {
     });
   };
 
-  const [personCounts, setPersonCounts] = useState(
-    cartItems.map(() => 1) // Initialize with 1 person for each item
-  );
+  const [personCounts, setPersonCounts] = useState(cartItems.map(() => 1));
 
   const handlePersonChange = (index, value) => {
     const updatedCounts = [...personCounts];
@@ -41,13 +43,26 @@ function Cart() {
   };
 
   const handleBookNow = (item, personCount) => {
+    const hotels = [
+      { id: 1, name: "Hotel A", price: "$100 per night" },
+      { id: 2, name: "Hotel B", price: "$150 per night" },
+      { id: 3, name: "Hotel C", price: "$200 per night" },
+    ];
+    setSelectedHotels(hotels);
+    setSelectedItem(item);
+
     Swal.fire({
-      title: "Booking Confirmed",
-      text: `You have booked ${item.name} for ${personCount} person(s).`,
-      icon: "success",
+      title: "Select a Hotel",
+      text: `Here are some hotels for ${item.name}.`,
+      icon: "info",
       showConfirmButton: false,
       timer: 1500,
     });
+  };
+
+  const handleSelectHotel = (hotel) => {
+    setSelectedHotel(hotel);
+    setShowPayment(true);
   };
 
   return (
@@ -99,6 +114,47 @@ function Cart() {
             </li>
           ))}
         </ul>
+      )}
+
+      {selectedHotels && (
+        <div className="mt-8">
+          <h3 className="text-2xl font-semibold mb-4">
+            Hotels for {selectedItem.name}
+          </h3>
+          <ul className="space-y-4">
+            {selectedHotels.map((hotel) => (
+              <li
+                key={hotel.id}
+                className="flex justify-between p-4 bg-gray-100 rounded-md shadow"
+              >
+                <div>
+                  <h4 className="text-lg font-semibold">{hotel.name}</h4>
+                  <p className="text-gray-600">{hotel.price}</p>
+                </div>
+                <button
+                  onClick={() => handleSelectHotel(hotel)}
+                  className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300"
+                >
+                  Select
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {showPayment && selectedHotel && (
+        <div className="mt-8 p-6 bg-white shadow rounded-lg">
+          <h3 className="text-2xl font-semibold mb-4">
+            Payment for {selectedHotel.name}
+          </h3>
+          <p className="text-gray-600 mb-4">
+            You selected {selectedHotel.name} with {personCounts} person(s).
+          </p>
+          <button className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 transition duration-300">
+            Proceed to Payment
+          </button>
+        </div>
       )}
     </div>
   );
