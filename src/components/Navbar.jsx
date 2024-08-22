@@ -8,6 +8,7 @@ function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLogedin = useSelector((state) => state.auth.isLogedin);
+  const user = useSelector((state) => state.auth.user);
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -31,6 +32,9 @@ function Navbar() {
             Travels <span id="samarkand">Bazar</span>
           </h1>
         </Link>
+        <div>
+          <h1>{user?.email}</h1>
+        </div>
 
         <div className="md:hidden">
           <button className="focus:outline-none" onClick={toggleMenu}>
