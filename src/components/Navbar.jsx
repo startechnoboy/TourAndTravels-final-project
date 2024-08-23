@@ -32,9 +32,6 @@ function Navbar() {
             Travels <span id="samarkand">Bazar</span>
           </h1>
         </Link>
-        <div>
-          <h1>{user?.email}</h1>
-        </div>
 
         <div className="md:hidden">
           <button className="focus:outline-none" onClick={toggleMenu}>
@@ -113,6 +110,9 @@ function Navbar() {
               >
                 <Link to="/contact">Contact Us</Link>
               </li>
+              <div>
+                <h1>{user?.email}</h1>
+              </div>
               <li
                 className="text-lg hover:text-gray-500 mx-5 my-2 md:my-0"
                 onClick={toggleMenu}
