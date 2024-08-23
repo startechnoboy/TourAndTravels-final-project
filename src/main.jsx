@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux';
 import Store from "./Store/store.js";
 import App from './App.jsx'
+import './tailwind.css';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={Store}>
