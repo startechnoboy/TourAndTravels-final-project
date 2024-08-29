@@ -27,7 +27,7 @@ const Home = () => {
             <span className="text-[3rem] animate-fadeIn">Welcome,</span>
             <span className="text-[2rem] animate-fadeIn"> to</span>
             <h1 className="text-[5rem] sm:ml-[25px] text-center font-[Agbalumo] animate-slideIn">
-              travels <span id="samarkand">Bazar</span>
+              travels Bazar
             </h1>
             {/* <p className="text-[1.5rem] mt-[1rem] text-center max-w-[600px] animate-fadeIn">
               Discover the world’s best destinations with just a click. Start your journey today with Travels Bazar!
